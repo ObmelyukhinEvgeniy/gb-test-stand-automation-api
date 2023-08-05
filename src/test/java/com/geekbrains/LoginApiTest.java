@@ -19,7 +19,6 @@ public class LoginApiTest {
     }
 
     @Test
-    @Description("Вход с валидными логином и паролем.")
     @DisplayName("Вход с валидными логином и паролем.")
     void positiveValideData() {
         given()
@@ -33,7 +32,6 @@ public class LoginApiTest {
     }
 
     @Test
-    @Description("Вход с не валидным логином и паролем.")
     @DisplayName("Вход с не валидным логином и паролем.")
     void negativeNoValideData() {
         given()
@@ -48,7 +46,6 @@ public class LoginApiTest {
     }
 
     @Test
-    @Description("Вход с пустым полем \"Username\" и валидным паролем")
     @DisplayName("Вход с пустым полем \"Username\" и валидным паролем")
     void negativeFieldEmptyUsername() {
         given()
@@ -63,7 +60,6 @@ public class LoginApiTest {
     }
 
     @Test
-    @Description("Вход с пустым полем \"Password\" и валидным логином")
     @DisplayName("Вход с пустым полем \"Password\" и валидным логином")
     void negativeFieldEmptyPassword() {
         given()
@@ -78,7 +74,6 @@ public class LoginApiTest {
     }
 
     @Test
-    @Description("Вход с пустыми полями \"Username\" и \"Password\".")
     @DisplayName("Вход с пустыми полями \"Username\" и \"Password\".")
     void negativeFieldsEmpty() throws InterruptedException {
         given()
@@ -93,7 +88,6 @@ public class LoginApiTest {
     }
 
     @Test
-    @Description("Вход с логином включающим спецсимволы и валидным паролем.")
     @DisplayName("Вход с логином включающим спецсимволы и валидным паролем.")
     void negativeFieldsSimvol() {
         given()
@@ -108,7 +102,6 @@ public class LoginApiTest {
     }
 
     @Test
-    @Description("Вход с логином включающим кирилицу и валидным паролем")
     @DisplayName("Вход с логином включающим кирилицу и валидным паролем")
     void negativeFieldUsernameRus() throws InterruptedException {
         given()
