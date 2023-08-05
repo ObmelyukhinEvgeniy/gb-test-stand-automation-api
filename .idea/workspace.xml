@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76558d6f-023c-4ff7-87d6-296043f02632" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/MyPostsApiTest.java" afterDir="false" />
+    <list default="true" id="76558d6f-023c-4ff7-87d6-296043f02632" name="Changes" comment="WorkReady">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/LoginApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/LoginApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/OthersPostsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/OthersPostsApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/MyPostsApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/MyPostsApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +148,18 @@
       <option name="presentableId" value="Default" />
       <updated>1690284114137</updated>
     </task>
+    <task id="LOCAL-00001" summary="WorkReady">
+      <created>1691249360991</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691249360991</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="WorkReady" />
+    <option name="LAST_COMMIT_MESSAGE" value="WorkReady" />
   </component>
 </project>

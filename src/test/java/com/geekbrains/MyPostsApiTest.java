@@ -29,7 +29,17 @@ public class MyPostsApiTest {
                 .statusCode(200)//Проверка на код 200
                 .contentType(ContentType.JSON)//В ответе приходит JSON
                 .body("data", not(empty()))//Поле 'data' не является пустым
-                .body("data.size()", equalTo(10));//Размер массива 'data' равен ожидаемому значению 10.
+                .body("data", everyItem(hasKey("id")))//В массиве 'data' содержится поле 'id'
+                .body("data", everyItem(hasKey("title")))
+                .body("data", everyItem(hasKey("description")))
+                .body("data", everyItem(hasKey("content")))
+                .body("data.size()", equalTo(10))//Размер массива 'data' равен ожидаемому значению 10.
+                .body("meta", hasKey("prevPage"))//В массиве 'meta' содержится поле 'prevPage'
+                .body("meta.prevPage", instanceOf(String.class))//Тип данных в массиве 'meta' у параметра 'prevPage' является String
+                .body("meta", hasKey("nextPage"))
+                .body("meta.nextPage", instanceOf(String.class))//Тип данных в массиве 'meta' у параметра 'nextPage' является String
+                .body("meta", hasKey("count"))
+                .body("meta.count", anyOf(instanceOf(Integer.class)));//Тип данных в массиве 'meta' у параметра 'count' является Integer
     }
     @Test
     @DisplayName("Запрос с параметрами:\"order\"=\"DESC\", \"page\"= 1")
@@ -45,7 +55,17 @@ public class MyPostsApiTest {
                 .statusCode(200)//Проверка на код 200
                 .contentType(ContentType.JSON)//В ответе приходит JSON
                 .body("data", not(empty()))//Поле 'data' не является пустым
-                .body("data.size()", equalTo(10));//Размер массива 'data' равен ожидаемому значению 10.
+                .body("data", everyItem(hasKey("id")))//В массиве 'data' содержится поле 'id'
+                .body("data", everyItem(hasKey("title")))
+                .body("data", everyItem(hasKey("description")))
+                .body("data", everyItem(hasKey("content")))
+                .body("data.size()", equalTo(10))//Размер массива 'data' равен ожидаемому значению 10.
+                .body("meta", hasKey("prevPage"))//В массиве 'meta' содержится поле 'prevPage'
+                .body("meta.prevPage", instanceOf(String.class))//Тип данных в массиве 'meta' у параметра 'prevPage' является String
+                .body("meta", hasKey("nextPage"))
+                .body("meta.nextPage", instanceOf(String.class))//Тип данных в массиве 'meta' у параметра 'nextPage' является String
+                .body("meta", hasKey("count"))
+                .body("meta.count", anyOf(instanceOf(Integer.class)));//Тип данных в массиве 'meta' у параметра 'count' является Integer
     }
     @Test
     @DisplayName("Запрос с параметрами:\"order\"=\"ASC\", \"page\"= -1")
@@ -78,6 +98,7 @@ public class MyPostsApiTest {
                 .body("data", is(empty()));//Массив 'data' является пустым
     }
     @Test
+    @DisplayName("Запрос с параметрами:\"order\"=\"ASC\", \"page\"= 40000")
     void extendedNonExistentPageTest() {
         given()
                 .header("X-Auth-Token", "4cab6cf7e5263d8c3e578ce38eee5cff")
